@@ -85,9 +85,12 @@ public class Calculator {
 //           Арабские числа
             number1 = Integer.parseInt(a);
             number2 = Integer.parseInt(b);
-            if (number1 < 1 || number1 > 10 && number2 < 1 || number2 > 10) {
+            if (number1 < 1 || number1 > 10) {
                 throw new InputMismatchException();
-            } else {
+            } else if(number2 < 1 || number2 > 10){
+                throw new InputMismatchException();}
+            else
+            {
                 resultString = String.valueOf(calc(number1, number2, operation));
             }
 
