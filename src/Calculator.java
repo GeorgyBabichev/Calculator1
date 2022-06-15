@@ -97,7 +97,7 @@ public class Calculator {
             throw new InputMismatchException();
         } else {
             result = calc(number1, number2, operation);
-            if (result < 0) {
+            if (result < 1) {
                 throw new ArithmeticException();
             } else {
                 resultString = convertNumToRoman(result);
